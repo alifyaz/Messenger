@@ -1,0 +1,83 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "sans-serif";
+  background-image: linear-gradient(135deg, #fff, #ddd);
+}
+
+body #root {
+  position: relative;
+  width: 60%;
+  height: 70%;
+  background-color: white;
+  border-radius: 30px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 35px 30px #d3d3d3;
+          box-shadow: 0 35px 30px #d3d3d3;
+  -webkit-transition: all 1s, width 1s 0s, height 1s 0.8s;
+  transition: all 1s, width 1s 0s, height 1s 0.8s;
+}
+
+body #root #short-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  right: 0;
+  width: 35%;
+  height: 100%;
+  color: white;
+  background-color: #4eafb7;
+  -webkit-transition: 1s cubic-bezier(0.68, 0.24, 0, 1.47), color 0s, background-color 0.5s;
+  transition: 1s cubic-bezier(0.68, 0.24, 0, 1.47), color 0s, background-color 0.5s;
+}
+
+body #root #detailed-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 0;
+  width: 65%;
+  height: 100%;
+  background-color: white;
+  -webkit-transition: 1s cubic-bezier(0.68, 0.24, 0, 1.47), color 0s;
+  transition: 1s cubic-bezier(0.68, 0.24, 0, 1.47), color 0s;
+}
+/*# sourceMappingURL=App.css.map */
