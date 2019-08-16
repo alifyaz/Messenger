@@ -16,6 +16,20 @@ export const signUpStrings = {
     header: {
       en: 'Create New Account'
     },
+    placeholder: {
+      userName: {
+        en: 'Username'
+      },
+      email: {
+        en: 'E-mail'
+      },
+      password: {
+        en: 'Password'
+      },
+      retypePassword: {
+        en: 'Retype Password'
+      }
+    },
     btn: {
       en: 'sign up'
     }

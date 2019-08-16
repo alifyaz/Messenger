@@ -1,41 +1,41 @@
 /*********************************** short side start ******************************/
 /* header inside short side */
-.sign-up-short-side-header {
+.login-short-side-header {
   text-align: center;
   padding: 10px;
 }
 
 /* text inside short side */
-.sign-up-short-side-text {
+.login-short-side-text {
   text-align: center;
   padding: 10px;
 }
 
 /* button inside short side consists of a div and a link */
-.sign-up-short-side-btn {
+.login-short-side-btn {
   width: 70%;
   margin-top: 20px;
   border: 1px solid white;
   border-radius: 40px;
-  background-color: #4eafb7;
+  background-color: #3ab397;
   overflow: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   /* the link of button */
 }
 
-.sign-up-short-side-btn:hover {
+.login-short-side-btn:hover {
   background-color: white;
   width: 90%;
 }
 
-.sign-up-short-side-btn:active {
+.login-short-side-btn:active {
   opacity: 0.5;
   -webkit-transition: 0s;
   transition: 0s;
 }
 
-.sign-up-short-side-btn a {
+.login-short-side-btn a {
   display: block;
   padding: 14px;
   color: white;
@@ -48,22 +48,23 @@
   transition: background-color 0.5s, color 0.5s;
 }
 
-.sign-up-short-side-btn a:hover {
-  color: #4eafb7;
+.login-short-side-btn a:hover {
+  color: #3ab397;
 }
 
 /**************************** short side end ***********************************/
 /************************** detailed side start ********************************/
-/* header with text "Create New Account" */
-.sign-up-detailed-side-header {
-  color: #4eafb7;
+/* header with text "Sign In" */
+.login-detailed-side-header {
+  color: #3ab397;
+  font-size: 2.5em;
   text-align: center;
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
 }
 
 /* form container */
-.sign-up-form {
+.login-form {
   margin-top: 50px;
   width: 60%;
   display: -webkit-box;
@@ -76,11 +77,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* form  4 labels - each one contains a text-input and an icon */
-  /* submit button with value of "sign up" */
+  /* form 2 labels - each one contains a text-input and an icon */
+  /* link with value "Forgot Password?" */
+  /* submit button with value of "sign in" */
 }
 
-.sign-up-form label {
+.login-form label {
   position: relative;
   margin: 5px;
   width: 100%;
@@ -88,7 +90,7 @@
   /* text-inputs inside form */
 }
 
-.sign-up-form label i {
+.login-form label i {
   position: absolute;
   top: 50%;
   -webkit-transform: translate(0, -50%);
@@ -101,7 +103,7 @@
   transition: 0.5s;
 }
 
-.sign-up-form label input {
+.login-form label input {
   width: 100%;
   height: 40px;
   padding: 5px 40px;
@@ -117,61 +119,69 @@
   transition: 0.5s;
 }
 
-.sign-up-form label input:focus {
+.login-form label input:focus {
   outline: none;
-  border-bottom: 1px solid #4eafb7;
+  border-bottom: 1px solid #3ab397;
 }
 
-.sign-up-form label input:focus::-webkit-input-placeholder {
+.login-form label input:focus::-webkit-input-placeholder {
   opacity: 0;
 }
 
-.sign-up-form label input:focus:-ms-input-placeholder {
+.login-form label input:focus:-ms-input-placeholder {
   opacity: 0;
 }
 
-.sign-up-form label input:focus::-ms-input-placeholder {
+.login-form label input:focus::-ms-input-placeholder {
   opacity: 0;
 }
 
-.sign-up-form label input:focus::placeholder {
+.login-form label input:focus::placeholder {
   opacity: 0;
 }
 
-.sign-up-form label input:focus ~ i {
-  color: #4eafb7;
+.login-form label input:focus ~ i {
+  color: #3ab397;
 }
 
-.sign-up-form label input::-webkit-input-placeholder {
+.login-form label input::-webkit-input-placeholder {
   opacity: 1;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
-.sign-up-form label input:-ms-input-placeholder {
+.login-form label input:-ms-input-placeholder {
   opacity: 1;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
-.sign-up-form label input::-ms-input-placeholder {
+.login-form label input::-ms-input-placeholder {
   opacity: 1;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
-.sign-up-form label input::placeholder {
+.login-form label input::placeholder {
   opacity: 1;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
-.sign-up-form .sign-up-detailed-side-btn {
+.login-form a {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-left: 10%;
+  text-decoration: none;
+  color: #3ab397;
+}
+
+.login-form .login-detailed-side-btn {
   width: 70%;
   margin-top: 30px;
   border: none;
   border-radius: 40px;
-  background-color: #4eafb7;
+  background-color: #3ab397;
   padding: 14px;
   color: white;
   font-family: "Syncopate";
@@ -181,20 +191,20 @@
   transition: 0.5s;
 }
 
-.sign-up-form .sign-up-detailed-side-btn:hover {
+.login-form .login-detailed-side-btn:hover {
   width: 90%;
   cursor: pointer;
 }
 
-.sign-up-form .sign-up-detailed-side-btn:active {
+.login-form .login-detailed-side-btn:active {
   opacity: 0.5;
   -webkit-transition: 0s;
   transition: 0s;
 }
 
-.sign-up-form .sign-up-detailed-side-btn:focus {
+.login-form .login-detailed-side-btn:focus {
   outline: none;
 }
 
 /*************************** detailed side end ***********************************/
-/*# sourceMappingURL=SignUp.css.map */
+/*# sourceMappingURL=Login.css.map */

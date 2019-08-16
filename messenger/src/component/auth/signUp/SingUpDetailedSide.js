@@ -6,17 +6,15 @@ export default class SignUpDetailedSide extends React.Component {
   render() {
     return (
       <>
-        <h1 className='detailed-side-header'>
+        <h1 className='sign-up-detailed-side-header'>
           {signUpStrings.detailedSide.header.en}
         </h1>
-        <form>
+        <form className='sign-up-form'>
           <label>
             <input
               type='text'
               name='userName'
-              value=''
-              onChange={this.handleChange}
-              placeholder='Username'
+              placeholder={signUpStrings.detailedSide.placeholder.userName.en}
             />
             <i className='material-icons'>person_outline</i>
           </label>
@@ -24,19 +22,15 @@ export default class SignUpDetailedSide extends React.Component {
             <input
               type='text'
               name='email'
-              value=''
-              onChange={this.handleChange}
-              placeholder='E-mail'
+              placeholder={signUpStrings.detailedSide.placeholder.email.en}
             />
-            <i className='material-icons'>phone_iphone</i>
+            <i className='material-icons'>mail_outline</i>
           </label>
           <label>
             <input
               type='password'
               name='password'
-              value=''
-              onChange={this.handleChange}
-              placeholder='Password'
+              placeholder={signUpStrings.detailedSide.placeholder.password.en}
             />
             <i className='material-icons'>lock_outline</i>
           </label>
@@ -44,15 +38,13 @@ export default class SignUpDetailedSide extends React.Component {
             <input
               type='password'
               name='retypePassword'
-              value=''
-              onChange={this.handleChange}
-              placeholder='Retype Password'
+              placeholder={signUpStrings.detailedSide.placeholder.retypePassword.en}
             />
             <i className='material-icons'>lock_outline</i>
           </label>
           <input
             type='submit'
-            className='detailed-side-btn'
+            className='sign-up-detailed-side-btn'
             value={signUpStrings.detailedSide.btn.en}
           />
         </form>

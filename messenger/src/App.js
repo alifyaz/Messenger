@@ -15,7 +15,7 @@ export default class App extends React.Component {
       // 1. <SignUp />
       // 2. <Login />
       // 3. <Messenger />
-      currentPageTitle: 'SignUp'
+      currentPageTitle: 'Login'
     }
   }
 
