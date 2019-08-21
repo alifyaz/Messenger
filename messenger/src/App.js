@@ -6,6 +6,7 @@ import SignUpDetailedSide from './component/auth/signUp/SingUpDetailedSide'
 import LoginDetailedSide from './component/auth/login/LoginDetailedSide'
 import MessengerShortSide from './component/conversation/MessengerShortSide'
 import MessengerDetailedSide from './component/conversation/MessengerDetailedSide'
+// import theme from './config/theme'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ export default class App extends React.Component {
       // 1. <SignUp />
       // 2. <Login />
       // 3. <Messenger />
-      currentPageTitle: 'Login'
+      currentPageTitle: 'Messenger'
     }
   }
 
@@ -53,6 +54,7 @@ export default class App extends React.Component {
           : this.state.currentPageTitle === 'SignUp' ? <SignUpDetailedSide />
             : <MessengerDetailedSide />
     }
+    // const styles = theme[this.state.currentPageTitle]
 
     // Every page in Messenger Web App is consist of two sides:
     // 'div' element with id of "short-side" holds some abstract info

@@ -1,0 +1,113 @@
+.contact-item {
+  position: relative;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($login-theme-color, 0.1);
+
+    circle {
+      stroke-dashoffset: 0;
+      transform: rotate(270deg);
+      transition: all 1s ease, stroke-opacity 0s;
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    margin-left: 7px;
+    z-index: 1;
+
+    circle {
+      fill: transparent;
+      stroke: $login-theme-color;
+      stroke-width: 2px;
+      stroke-dasharray: 126;
+      stroke-dashoffset: 126;
+      transform: rotate(90deg);
+      transform-origin: 50% 50%;
+      transition: all 1s ease;
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-right: 10px;
+    transition: all 0.5s;
+    transform: translate(0%, -50%);
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+
+  .contact-item-details-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+
+    .contact-item-user-time-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 2px 5px;
+
+      .contact-item-user {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 5px;
+        font-family: "Candal";
+        font-size: 14px;
+        color: $login-theme-color;
+        transition: all 0.5s;
+      }
+
+      .contact-item-time {
+        font-family: "Thasadith";
+        font-size: 12px;
+      }
+    }
+
+    .contact-item-desc-unseen-container {
+      position: relative;
+      margin: 2px 5px;
+
+      .contact-item-desc {
+        display: inline-block;
+        width: 80%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-family: "Thasadith";
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding-right: 20px;
+      }
+
+      .contact-item-unseen {
+        position: absolute;
+        right: 0;
+        background-color: $login-theme-color;
+        border-radius: 20px;
+        padding: 0 2px;
+        min-width: 20px;
+        font-family: "Thasadith";
+        font-size: 12px;
+        text-align: center;
+        color: white;
+        transition: all 0.5s;
+      }
+    }
+  }
+}

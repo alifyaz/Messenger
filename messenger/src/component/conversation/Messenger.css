@@ -1,1 +1,326 @@
-/* No CSS *//*# sourceMappingURL=Messenger.css.map */
+.contact-item {
+  position: relative;
+  height: 60px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.contact-item:hover {
+  background-color: rgba(58, 179, 151, 0.1);
+}
+
+.contact-item:hover circle {
+  stroke-dashoffset: 0;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  -webkit-transition: all 1s ease, stroke-opacity 0s;
+  transition: all 1s ease, stroke-opacity 0s;
+}
+
+.contact-item svg {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  margin-left: 7px;
+  z-index: 1;
+}
+
+.contact-item svg circle {
+  fill: transparent;
+  stroke: #3ab397;
+  stroke-width: 2px;
+  stroke-dasharray: 126;
+  stroke-dashoffset: 126;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.contact-item img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-right: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.contact-item .contact-item-details-container {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 50px;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact-item .contact-item-details-container .contact-item-user-time-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2px 5px;
+}
+
+.contact-item .contact-item-details-container .contact-item-user-time-container .contact-item-user {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 5px;
+  font-family: "Candal";
+  font-size: 14px;
+  color: #3ab397;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.contact-item .contact-item-details-container .contact-item-user-time-container .contact-item-time {
+  font-family: "Thasadith";
+  font-size: 12px;
+}
+
+.contact-item .contact-item-details-container .contact-item-desc-unseen-container {
+  position: relative;
+  margin: 2px 5px;
+}
+
+.contact-item .contact-item-details-container .contact-item-desc-unseen-container .contact-item-desc {
+  display: inline-block;
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Thasadith";
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding-right: 20px;
+}
+
+.contact-item .contact-item-details-container .contact-item-desc-unseen-container .contact-item-unseen {
+  position: absolute;
+  right: 0;
+  background-color: #3ab397;
+  border-radius: 20px;
+  padding: 0 2px;
+  min-width: 20px;
+  font-family: "Thasadith";
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.search-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  position: relative;
+  height: 50px;
+  background-color: rgba(58, 179, 151, 0);
+}
+
+.search-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#3ab397), color-stop(#3ab397), to(transparent));
+  background-image: linear-gradient(to right, transparent, #3ab397, #3ab397, transparent);
+}
+
+.search-container i {
+  color: #3ab397;
+  font-weight: bold;
+  font-size: 28px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.search-container label {
+  position: relative;
+  width: 100%;
+}
+
+.search-container label input {
+  background: rgba(58, 179, 151, 0.08);
+  width: calc(100% - 10px);
+  border: none;
+  margin-left: 5px;
+  padding: 18px 10px;
+  height: 30px;
+  border-radius: 10px;
+  font-family: "Thasadith";
+  color: #216656;
+  letter-spacing: 2px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.search-container label input:hover::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+.search-container label input:hover:-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.search-container label input:hover::-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.search-container label input:hover::placeholder {
+  opacity: 0.5;
+}
+
+.search-container label input:focus {
+  outline: none;
+  background: rgba(58, 179, 151, 0.2);
+}
+
+.search-container label input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.search-container label input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.search-container label input:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.search-container label input:focus::placeholder {
+  opacity: 0;
+}
+
+.search-container label input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #34a087;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.search-container label input:-ms-input-placeholder {
+  opacity: 1;
+  color: #34a087;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.search-container label input::-ms-input-placeholder {
+  opacity: 1;
+  color: #34a087;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.search-container label input::placeholder {
+  opacity: 1;
+  color: #34a087;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.search-container label::after {
+  content: "";
+  position: absolute;
+  left: 7%;
+  width: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: #3ab397;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.search-container label:hover::after {
+  width: 86%;
+}
+
+.scrollbar-hider {
+  position: relative;
+  height: 100%;
+}
+
+.scrollbar-hider::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 4px;
+  width: 5px;
+  height: 100%;
+  background-color: #f1f1f1;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.scrollbar-hider:hover::after {
+  width: 0;
+}
+
+.contact-item-container {
+  height: calc(100% - 50px);
+  overflow: auto;
+  border-right: 5px solid #f1f1f1;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.contact-item-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.contact-item-container::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.contact-item-container::-webkit-scrollbar-track:hover {
+  -webkit-box-shadow: inset 0 0 5px #0002;
+          box-shadow: inset 0 0 5px #0002;
+}
+
+.contact-item-container::-webkit-scrollbar-thumb {
+  background-color: rgba(58, 179, 151, 0.5);
+  border-radius: 10px;
+}
+
+.contact-item-container::-webkit-scrollbar-thumb:hover {
+  background-color: #3ab397;
+}
+/*# sourceMappingURL=Messenger.css.map */
