@@ -2,6 +2,7 @@ import React from 'react'
 import './Messenger.css'
 import { messengerStrings } from '../../strings/MessengerStrings'
 import ContactItem from './shortSide/ContactItem';
+import NewChatFormDialog from './shortSide/NewChatFormDialog';
 
 export default class MessengerShortSide extends React.Component {
   render() {
@@ -39,6 +40,8 @@ export default class MessengerShortSide extends React.Component {
             <ContactItem />
 
           </div>
+          {/* <i className='material-icons' onClick={() => this.handleCreateBtnClick()}>add</i> */}
+          <NewChatFormDialog />
         </div>
       </>
     );

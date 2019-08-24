@@ -1,0 +1,26 @@
+// exported to 'App.scss' and used inside .messenger
+
+@import "../../../colors/colors";
+
+.header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 50px;
+  background-color: #f1f1f1;
+  box-shadow: 10px 0 10px #0005;
+
+  img {
+    float: left;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .header-user {
+    color: $login-theme-color;
+    font-size: 2em;
+    margin-left: 10px;
+  }
+}

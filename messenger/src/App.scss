@@ -21,7 +21,10 @@ p {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(135deg, #fff, #ddd);
+  // background-image: linear-gradient(135deg, #fff, #ddd);
+  background: url("./colors/New\ Project.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 
   // Sign-up page
   .SignUp {
@@ -81,10 +84,10 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: stretch;
-    width: calc(100% - 20px);
-    height: calc(100% - 20px);
-    border-radius: 30px;
-    box-shadow: 0 35px 30px #d3d3d3;
+    width: calc(80% - 20px);
+    height: calc(90% - 20px);
+    border-radius: 00px;
+    box-shadow: 0 22px 26px #a2d3d8;
     overflow: hidden;
 
     .short-side {
@@ -98,6 +101,10 @@ p {
     .detailed-side {
       width: 80%;
       background-color: white;
+
+      @import "./component/conversation/detailedSide/Header";
+      @import "./component/conversation/detailedSide/ChatBox";
+      @import "./component/conversation/detailedSide/Footer";
     }
   }
 }

@@ -1,0 +1,66 @@
+// exported to 'App.scss' and used inside .messenger
+@import "../../../colors/colors";
+
+.footer {
+  position: relative;
+  height: 50px;
+  background-color: $login-theme-color;
+  box-shadow: 10px 0 10px #0005;
+
+  input {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding: 0 50px 0 10px;
+    color: #f1f1f1;
+    font-family: "Thasadith";
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: 0.5s;
+
+    &::placeholder {
+      color: #f1f1f1;
+      transition: 0.5s;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: rgba(#f1f1f1, 0.3);
+
+      &::placeholder {
+        color: rgba(#f1f1f1, 0.7);
+        font-size: 0px;
+      }
+    }
+  }
+
+  i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #f1f1f1;
+    font-size: 30px;
+    cursor: pointer;
+
+    &:hover {
+      color: lighten($login-theme-color, 40%);
+    }
+
+    &:active {
+      animation: anim 0.1s;
+    }
+  }
+}
+
+@keyframes anim {
+  from {
+    transform: translate(0%, -50%);
+  }
+
+  to {
+    transform: translate(100%, -50%);
+  }
+}

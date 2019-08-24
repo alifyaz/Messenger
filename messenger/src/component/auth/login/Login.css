@@ -17,7 +17,7 @@
   margin-top: 20px;
   border: 1px solid white;
   border-radius: 40px;
-  background-color: #3ab397;
+  background-color: #4eafb7;
   overflow: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -49,14 +49,14 @@
 }
 
 .login-short-side-btn a:hover {
-  color: #3ab397;
+  color: #4eafb7;
 }
 
 /**************************** short side end ***********************************/
 /************************** detailed side start ********************************/
 /* header with text "Sign In" */
 .login-detailed-side-header {
-  color: #3ab397;
+  color: #4eafb7;
   font-size: 2.5em;
   text-align: center;
   -webkit-transition: color 0.5s;
@@ -121,7 +121,7 @@
 
 .login-form label input:focus {
   outline: none;
-  border-bottom: 1px solid #3ab397;
+  border-bottom: 1px solid #4eafb7;
 }
 
 .login-form label input:focus::-webkit-input-placeholder {
@@ -141,7 +141,7 @@
 }
 
 .login-form label input:focus ~ i {
-  color: #3ab397;
+  color: #4eafb7;
 }
 
 .login-form label input::-webkit-input-placeholder {
@@ -173,7 +173,7 @@
       align-self: flex-start;
   padding-left: 10%;
   text-decoration: none;
-  color: #3ab397;
+  color: #4eafb7;
 }
 
 .login-form .login-detailed-side-btn {
@@ -181,7 +181,7 @@
   margin-top: 30px;
   border: none;
   border-radius: 40px;
-  background-color: #3ab397;
+  background-color: #4eafb7;
   padding: 14px;
   color: white;
   font-family: "Syncopate";

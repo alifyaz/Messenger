@@ -93,7 +93,7 @@
     display: block;
     top: 0;
     right: 4px;
-    width: 5px;
+    width: 6px;
     height: 100%;
     background-color: #f1f1f1;
     transition: 0.3s ease-out;
@@ -102,6 +102,8 @@
   &:hover::after {
     width: 0;
   }
+
+  @import "./shortSide/NewChatFormDialog";
 }
 
 .contact-item-container {

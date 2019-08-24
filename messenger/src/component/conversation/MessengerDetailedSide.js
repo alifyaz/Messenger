@@ -9,7 +9,6 @@ export default class MessengerDetailedSide extends React.Component {
       <Header />
       <ChatBox />
       <Footer />
-      *******Under Progress*******
     </>
   }
 }

@@ -1,0 +1,43 @@
+i {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #f1f1f1;
+  background-color: $login-theme-color;
+  border-radius: 20px;
+  box-shadow: 2px 3px 3px #5555;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($login-theme-color, 10%);
+    width: 115px;
+
+    &::after {
+      content: "Create";
+      font-family: "Thasadith";
+      letter-spacing: 1px;
+      margin-left: 5px;
+    }
+  }
+
+  &:active {
+    box-shadow: 0px 1px 2px #5555;
+    transition: 0s;
+  }
+}
+
+#search-dialog {
+  background-color: #b43e3e !important;
+
+  #form-dialog-title {
+    font-family: "Candal";
+    color: red !important;
+  }
+}
