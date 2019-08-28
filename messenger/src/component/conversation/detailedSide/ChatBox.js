@@ -1,27 +1,24 @@
 import React from 'react'
 
-export default function ChatBox() {
-  return (
-    <div className='chat-box'>
-      <div className="sender">hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii </div>
-      <div className="receiver">hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey </div>
-      <div className="sender">hiii</div><div className="sender">hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii </div>
-      <div className="receiver">hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey </div>
-      <div className="sender">hiii</div><div className="sender">hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii </div>
-      <div className="receiver">hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey </div>
-      <div className="sender">hiii</div><div className="sender">hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii </div>
-      <div className="receiver">hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey </div>
-      <div className="sender">hiii</div><div className="sender">hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii hi hii </div>
-      <div className="receiver">hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey </div>
-      <div className="sender">hiii</div>
-      <div className="receiver">hey</div>
-      <div className="sender">hiii</div>
-      <div className="receiver">hey</div>
-      <div className="sender">hiii</div>
-      <div className="receiver">hey</div>
-      <div className="sender">hey</div>
-      <div className="receiver">hey</div>
-      <div className="sender">hey</div>
-    </div>
-  )
+export default class ChatBox extends React.Component {
+  render() {
+    return (
+      <div className='chat-box'>
+        {
+          this.props.messagesList.map((message, index) => {
+            if (message.sender === 1) {
+              return (
+                <div key={index} className='sender' ><span>{message.text}</span></div>
+              )
+            } else {
+              return (
+                <div key={index} className='receiver' ><span>{message.text}</span></div>
+              )
+            }
+          })
+        }
+
+      </div>
+    )
+  }
 }

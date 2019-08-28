@@ -56,11 +56,15 @@
 }
 
 @keyframes anim {
-  from {
+  0% {
     transform: translate(0%, -50%);
   }
 
-  to {
+  50% {
     transform: translate(100%, -50%);
+  }
+
+  100% {
+    transform: translate(0%, -50%);
   }
 }

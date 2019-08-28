@@ -1,8 +1,13 @@
 import React from 'react'
 
-export default function Header() {
-  return <div className='header'>
-    <img src="favicon.ico" alt='avatar' />
-    <div className='header-user'>Reza</div>
-  </div>
+export default class Header extends React.Component {
+  render() {
+    return <div className='header'>
+      {
+        this.props.avatar !== '' ?
+          <img src={this.props.avatar} alt='avatar' /> : null
+      }
+      <div className='header-user'>{this.props.firstName} {this.props.lastName}</div>
+    </div>
+  }
 }

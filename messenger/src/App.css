@@ -331,24 +331,32 @@ p {
 }
 
 @-webkit-keyframes anim {
-  from {
+  0% {
     -webkit-transform: translate(0%, -50%);
             transform: translate(0%, -50%);
   }
-  to {
+  50% {
     -webkit-transform: translate(100%, -50%);
             transform: translate(100%, -50%);
+  }
+  100% {
+    -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
   }
 }
 
 @keyframes anim {
-  from {
+  0% {
     -webkit-transform: translate(0%, -50%);
             transform: translate(0%, -50%);
   }
-  to {
+  50% {
     -webkit-transform: translate(100%, -50%);
             transform: translate(100%, -50%);
+  }
+  100% {
+    -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
   }
 }
 /*# sourceMappingURL=App.css.map */

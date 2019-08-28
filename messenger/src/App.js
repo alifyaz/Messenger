@@ -1,12 +1,19 @@
 import React from 'react'
 import './App.css'
+
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import conversation from './reducer/Conversation'
+
 import LoginShortSide from './component/auth/login/LoginShortSide'
 import SignUpShortSide from './component/auth/signUp/SignUpShortSide'
 import SignUpDetailedSide from './component/auth/signUp/SingUpDetailedSide'
 import LoginDetailedSide from './component/auth/login/LoginDetailedSide'
-import MessengerShortSide from './component/conversation/MessengerShortSide'
 import MessengerDetailedSide from './component/conversation/MessengerDetailedSide'
+import MessengerShortSideContainer from './container/MessengerShortSideContainer'
 // import theme from './config/theme'
+
+const store = createStore(conversation, window.devToolsExtension && window.devToolsExtension())
 
 export default class App extends React.Component {
   constructor(props) {
@@ -19,23 +26,6 @@ export default class App extends React.Component {
       currentPageTitle: 'Messenger'
     }
   }
-
-  // ************* TO BE ASKED *****************
-  // add and remove .css files inside components
-  // *******************************************
-  //
-  // handleChange(e) {
-  //   console.log("e::", e.target.value);
-  //   if (e.target.value !== "") {
-  //     var test = require("./testCss.css");
-  //     console.log("test in if::", test);
-  //   } else {
-  //     console.log("NULL value recieved");
-  //     console.log("test in else::", test);
-  //   }
-  // }
-
-
   // handleClick() {
   //   this.setState({
   //     currentPageTitle: this.state.currentPageTitle === 'SignUp'
@@ -48,7 +38,7 @@ export default class App extends React.Component {
       shortSide:
         this.state.currentPageTitle === 'Login' ? <LoginShortSide />
           : this.state.currentPageTitle === 'SignUp' ? <SignUpShortSide />
-            : <MessengerShortSide />,
+            : <MessengerShortSideContainer />,
       detailedSide:
         this.state.currentPageTitle === 'Login' ? <LoginDetailedSide />
           : this.state.currentPageTitle === 'SignUp' ? <SignUpDetailedSide />
@@ -60,15 +50,17 @@ export default class App extends React.Component {
     // 'div' element with id of "short-side" holds some abstract info
     // and the "detailed-side" div has the main content
     return (
-      <div className={this.state.currentPageTitle}>
-        <div className='short-side'>
-          {currentPage.shortSide}
+      <Provider store={store}>
+        <div className={this.state.currentPageTitle}>
+          <div className='short-side'>
+            {currentPage.shortSide}
+          </div>
+          {/* <button onClick={() => this.handleClick()} >Toggle</button> */}
+          <div className='detailed-side'>
+            {currentPage.detailedSide}
+          </div>
         </div>
-        {/* <button onClick={() => this.handleClick()} >Toggle</button> */}
-        <div className='detailed-side'>
-          {currentPage.detailedSide}
-        </div>
-      </div>
+      </Provider>
     )
   }
 }
